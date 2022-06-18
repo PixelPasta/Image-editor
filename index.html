@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="app.js"></script>
+    <style>
+      .uwu:hover {
+        color: gray
+      }
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg uwu bg-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="uwu">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link"class="align-top" href="" style="color:white;margin-right: 4px;" ><h2>🖼PixelPerfect</h2> <span class="sr-only"></span></a>
+              </li>
+               
+              <li class="nav-item active">
+                <a class="nav-link" class="align-baseline" href="/" style="color:white;margin-top: 4px;" onMouseOver="this.style.color='grey'" onMouseOut="this.style.color='white'"><h3>Home</h3> <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#" class="align-baseline" href="#" style="color:white;margin-top: 4px;" ><h3>|</h3> <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/about" class="align-baseline"  style="color:white;margin-top: 4px;"  onMouseOver="this.style.color='grey'" onMouseOut="this.style.color='white'"><h3>About</h3> <span class="sr-only"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <br><h3 style="margin-left: 15px;font-family: acme; margin-right: 15px">
+       Upload your file: </h3>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="form-group" style="margin-left: 15px;; margin-right: 15px">
+            <input
+              type="file"
+              name="file"
+              required
+              accept=".png, .jpg, .jpeg"
+              class="form-control"
+            />
+          </div> <br><h3 style="margin-left: 15px;font-family: acme; margin-right: 15px">
+          Choose Image Size (Leave empty for default): </h3>
+          <div class="form-group" style="margin-left: 15px;; margin-right: 15px"> 
+            <label for="height">Height:</label>
+            <input type="number" class="form-control" name="height" placeholder="your desired height">
+          </div>
+          <div class="form-group" style="margin-left: 15px;; margin-right: 15px"> 
+            <label for="width">width:</label>
+            <input type="number" class="form-control" name="width" placeholder="your desired width">
+          </div>
+          <br><h3 style="margin-left: 15px;font-family: acme; margin-right: 15px">
+            Choose Image Output Type: </h3>
+          <div style="margin-left: 15px;margin-right: 15px;">
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="format" class="custom-control-input" checked value="png">
+            <label class="custom-control-label" for="customRadio1">png</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="format" class="custom-control-input" value="jpg">
+            <label class="custom-control-label" for="customRadio2">jpg</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="format" class="custom-control-input" value="webp">
+            <label class="custom-control-label" for="customRadio2">webp</label>
+          </div>
+          <br><h3 style="font-family: acme"> 
+            Choose Image Filter: </h3>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="filter" id="option1" autocomplete="off"  value="none" checked> None
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="filter" id="option2" autocomplete="off" value="sepia"> Sepia
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="filter" id="option3" autocomplete="off" value="grayscale"> Grayscale
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="filter" id="option4" autocomplete="off" value="inverted"> Inverted
+              </label>
+          </div>
+          <br> <br> 
+          <div class="form-group">
+            <button type="submit" class="btn btn-secondary btn-block form-control" style="margin-bottom: 6px">Download Image</button>
+            <div class="alert alert-secondary" role="alert">
+             The processed image will open in a new tab. Please right click and save the image. Thanks for using pixelperfect :)
+          </div>
+          </div>
+          <br>
+        </form>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
